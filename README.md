@@ -6,7 +6,7 @@
 
 * 博文地址：[尝试解决 Android 适配的最后一公里](https://juejin.cn/post/7540524749425180735)
 
-* 可以扫码下载 Demo 进行演示或者测试，如果扫码下载不了的，[点击此处可直接下载](https://github.com/getActivity/DeviceCompat/releases/download/2.3/DeviceCompat.apk)
+* 可以扫码下载 Demo 进行演示或者测试，如果扫码下载不了的，[点击此处可直接下载](https://github.com/getActivity/DeviceCompat/releases/download/2.5/DeviceCompat.apk)
 
 ![](picture/download_demo_apk_qr_code.png)
 
@@ -65,7 +65,7 @@ dependencyResolutionManagement {
 ```groovy
 dependencies {
     // 设备兼容框架：https://github.com/getActivity/DeviceCompat
-    implementation 'com.github.getActivity:DeviceCompat:2.3'
+    implementation 'com.github.getActivity:DeviceCompat:2.5'
 }
 ```
 

@@ -8,8 +8,8 @@ android {
         minSdk 17
         // Android 版本适配指南：https://github.com/getActivity/AndroidVersionAdapter
         targetSdk 34
-        versionCode 23
-        versionName "2.3"
+        versionCode 25
+        versionName "2.5"
     }
 
     // 支持 Java JDK 8
