@@ -586,6 +586,27 @@ public final class DeviceOs {
      */
     static final String OS_CONDITIONS_NUBIA_UI = "ro.build.nubia.rom.name";
 
+    /* ---------------------------------------- 下面是豆包的系统 ---------------------------------------- */
+
+    static final int OS_TYPE_OBRIC_UI = 12510861;
+    static final String OS_NAME_OBRIC_UI = "ObricUI";
+    /**
+     * [ro.build.id]: [1.1.0.0]
+     * [ro.product.build.id]: [1.1.0.0]
+     * [ro.system.build.id]: [1.1.0.0]
+     * [ro.system_ext.build.id]: [1.1.0.0]
+     * [ro.build.display.id]: [1.1.0.0 release-keys]
+     */
+    static final String[] OS_VERSION_NAME_OBRIC_UI = { "ro.build.id",
+                                                       "ro.product.build.id",
+                                                       "ro.system.build.id",
+                                                       "ro.system_ext.build.id",
+                                                       SYSTEM_PROPERTY_BUILD_DISPLAY_ID };
+    /**
+     * [init.svc.bytecellular]: [running]
+     */
+    static final String OS_CONDITIONS_OBRIC_UI = "init.svc.bytecellular";
+
     /* ---------------------------------------- 下面是华硕的系统 ---------------------------------------- */
 
     static final int OS_TYPE_ROG_UI = 78153150;
@@ -836,6 +857,12 @@ public final class DeviceOs {
                 sCurrentOsName = OS_NAME_ZUI;
                 sCurrentOsVersionName = getBestVersionNameBySystemProperties(OS_VERSION_NAME_ZUI);
             }
+        }
+
+        if (sCurrentOsName == null && SystemPropertyCompat.isSystemPropertyExist(OS_CONDITIONS_OBRIC_UI)) {
+            sCurrentOsType = OS_TYPE_OBRIC_UI;
+            sCurrentOsName = OS_NAME_OBRIC_UI;
+            sCurrentOsVersionName = getBestVersionNameBySystemProperties(OS_VERSION_NAME_OBRIC_UI);
         }
 
         if (sCurrentOsName == null && SystemPropertyCompat.isSystemPropertyExist(OS_CONDITIONS_ROG_UI)) {
@@ -1168,6 +1195,13 @@ public final class DeviceOs {
      */
     public static boolean isNubiaUi() {
         return sCurrentOsType == OS_TYPE_NUBIA_UI;
+    }
+
+    /**
+     * 判断当前设备的厂商系统是否为 ObricUI（豆包手机的系统）
+     */
+    public static boolean isObricUi() {
+        return sCurrentOsType == OS_TYPE_OBRIC_UI;
     }
 
     /**

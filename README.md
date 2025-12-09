@@ -4,6 +4,8 @@
 
 * 项目地址：[Github](https://github.com/getActivity/DeviceCompat)
 
+* 博文地址：[尝试解决 Android 适配的最后一公里](https://juejin.cn/post/7540524749425180735)
+
 * 可以扫码下载 Demo 进行演示或者测试，如果扫码下载不了的，[点击此处可直接下载](https://github.com/getActivity/DeviceCompat/releases/download/2.3/DeviceCompat.apk)
 
 ![](picture/download_demo_apk_qr_code.png)
@@ -152,6 +154,9 @@ DeviceOs.isZui();
 
 // 判断当前设备的厂商系统是否为 nubiaUI（努比亚手机的老系统）
 DeviceOs.isNubiaUi();
+
+// 判断当前设备的厂商系统是否为 ObricUI（豆包手机的系统）
+DeviceOs.isObricUi();
 
 // 判断当前设备的厂商系统是否为 ROGUI（华硕手机的系统）
 DeviceOs.isRogUi();
